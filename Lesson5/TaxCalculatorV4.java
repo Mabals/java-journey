@@ -126,16 +126,6 @@ public class TaxCalculatorV4 {
         System.out.println("3. Exit");
     }
 
-    /*Once that works, make these changes in both printf lines:
-
-Rate: change %-14.2f%% → %.0f%% to get 18% instead of 18.00 %.
-Commas, no decimals, right-aligned: change R%-14.2f → %,15.0f. Drop the R, since the header will say "(R)", and drop the -, so numbers right-align.
-"and above": change %-15s → %15s so it's right-aligned like the numbers.
-Headers: make them match the column widths, for example:
-java
-   System.out.printf("%15s %15s %15s %5s%n", "From (R)", "To (R)", "Base tax (R)", "Rate");
-
-And the rate column: %4.0f%% (4 wide + the % sign = 5, matching the header's %5s). */
     public static void printTaxBrackets() {
         System.out.println("\n===== SARS Tax Brackets 2026/27 =====");
         System.out.printf("%15s %15s %15s %5s%n", "From (R)", "To (R)", "Base tax (R)", "Rate");
