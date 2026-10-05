@@ -2,17 +2,6 @@ package Lesson5;
 
 import java.util.Scanner;
 
-/*Part A: Warm-up (lesson05/MarksAnalyser.java)
-
-Write a program that:
-
-Asks how many students there are (use your readInt, and 
-copy your readInt and readDouble methods into this file).
-Creates an int[] of that size.
-Uses a loop to read each mark (0–100) into the array, 
-prompting "Mark for student 1: ", "Mark for student 2: ", and so on.
-Prints the marks, the average, highest, lowest, and pass count. */
-
 public class MarksAnalyser {
     public static void main(String[] args) {
 

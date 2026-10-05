@@ -108,12 +108,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class StatementAnalyser {
-    /* 3. Still open from the review (short):
-
-Add import java.util.Map; and import java.util.TreeMap; to the import list you just showed me, then shorten java.util.Map, java.util.TreeMap and java.util.Map.Entry to Map, TreeMap and Map.Entry. There are 4 spots.
-trim() the description, amount text and category.
-Optional: else if (amount < 0), and start largestExpense at 0. */
-
     public static void main(String[] args) {
         Path path = Path.of("Lesson9", "transactions.csv");
 

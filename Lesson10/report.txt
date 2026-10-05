@@ -1,0 +1,9 @@
+Transactions processed: 12 (1 skipped)
+Income R28 500,00, expenses R12 649,55, net R15 850,45
+Airtime R99,00
+Entertainment R199,00
+Groceries R2 876,55
+Housing R7 500,00
+Transport R1 325,00
+Utilities R650,00
+Largest expense: Rent (R7 500,00)

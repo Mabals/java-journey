@@ -1,19 +1,5 @@
 package Lesson4;
 
-/*Exercise 4: practice in small steps
-Part A: Warm-ups (lesson04/Warmups.java)
-
-Write each method, then call it from main to check it. Do them one at a time.
-
-Method	                           Test call	     Expected
-isEven(int n) → boolean	isEven(4), | isEven(7)	| true, false
-max(double a, double b) → double	| max(3.5, 9.1)	| 9.1
-monthlyToAnnual(double monthly) → double	| monthlyToAnnual(30000)	| 360000.0
-printLine(int length) → void, prints that many = using a loop	| printLine(10)	| ==========
-grade(int mark) → String: Distinction ≥ 75, Pass ≥ 50, else Fail	| grade(80), grade(55), grade(30)	| Distinction, Pass, Fail
-
- */
-
 public class WarmUps {
     public static void main(String[] args) {
         System.out.println("isEven(4) = " + isEven(4)); // Expected: true

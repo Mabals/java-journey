@@ -1,44 +1,5 @@
 package Lesson2;
 
-/*Exercise 2: Real SARS tax calculator
-
-In lesson02/TaxCalculator.java, upgrade your salary calculator to use the real 2026/27 
-tax brackets (1 March 2026 – 28 February 2027). According to SARS's official table, they are:
-
-Annual taxable income (R)	Tax
-1 – 245 100	18% of income
-245 101 – 383 100	44 118 + 26% of the amount above 245 100
-383 101 – 530 200	79 998 + 31% of the amount above 383 100
-530 201 – 695 800	125 599 + 36% of the amount above 530 200
-695 801 – 887 000	185 215 + 39% of the amount above 695 800
-887 001 – ?	259 783 + 41% of the amount above 887 000
-above ?	45% top bracket
-
-For the 41% and 45% brackets, get the missing figures from the SARS page yourself. 
-Reading the official spec instead of trusting someone's summary is a real developer skill.
-
-Requirements:
-
-Ask for name, age and monthly gross salary.
-Use a switch to ask: 1 = monthly salary entered, 2 = annual salary entered. 
-Convert to an annual amount if needed.
-Calculate the annual tax with if / else if.
-Subtract the primary rebate, which is R17,820 for everyone under 65. If the result is negative, the tax is R0, 
-because you can't pay negative tax.
-UIF is 1% of the monthly salary, capped at R177.12. Use an if or a ternary.
-Print a neat summary: gross, tax, UIF, and take-home pay, both monthly and annual.
-
-Test values:
-
-R7,000/month → tax should be R0. The rebate covers it, since you only pay tax above 
-about R99,000 a year.
-R30,000/month → R360,000/year, which falls in the 26% bracket. 
-Work out the expected tax on paper first, then check your program matches. 
-Testing against hand-calculated results is how real developers verify their logic.
-
-Bonus: if age is 65 or over, add the secondary rebate as well. 
-Find its value on the same SARS page. */
-
 import java.util.Scanner;
 
 public class TaxCalculator {
