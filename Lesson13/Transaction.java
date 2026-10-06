@@ -1,4 +1,4 @@
-package Lesson11;
+package Lesson13;
 
 public class Transaction {
     private final String date;
@@ -6,14 +6,6 @@ public class Transaction {
     private final double amount;
     private String category;
 
-    /*1. 🐛 The constructor skips the category validation
-
-setCategory rejects a blank category, but the constructor sets this.category = category; without checking. So this works, when it shouldn't:
-
-java
-new Transaction("2026-10-05", "Salary", 25000, "");   // ✅ allowed. Blank category!
-
-Validation must happen on every route into the object. Here, there are two routes: the constructor and the setter. The neatest fix is to have the constructor call setCategory(category) instead of assigning the field directly. Then the rule lives in one place, and both routes use it. */
 
     public Transaction(String date, String description, double amount, String category) {
         if (description == null || description.isBlank()) {

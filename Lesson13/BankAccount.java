@@ -1,12 +1,10 @@
-package Lesson11;
+package Lesson13;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Lesson12.Transaction;
-
-public class BankAccount {
+public abstract class BankAccount {
     private static int accountsOpened = 0; // shared counter for generating account numbers
     private final int accountNumber; // final: never changes after creation
     private final String holderName; // final: never changes after creation
@@ -44,12 +42,17 @@ public class BankAccount {
     public static int getAccountsOpened() {
         return accountsOpened;
     }
+    /*
+     * Below the getters Add a protected method getAvailableFunds() that returns the
+     * balance
+     * Below that Add a public method getAccountType() that returns "Account"
+     */
 
-    /*Below the getters	Add a protected method getAvailableFunds() that returns the balance
-    Below that	Add a public method getAccountType() that returns "Account" */
+    protected double getAvailableFunds() {
+        return balance;
+    }
 
-    
-
+    public abstract String getAccountType();
 
     public void deposit(double amount, String description, String category) {
         if (amount <= 0) {
@@ -63,8 +66,11 @@ public class BankAccount {
         if (amount <= 0) {
             throw new IllegalArgumentException("Withdrawal amount must be more than R0");
         }
-        if (amount > balance) {
-            throw new InsufficientFundsException("Insufficient funds for withdrawal");
+        if (amount > getAvailableFunds()) {
+            throw new InsufficientFundsException(
+                    "Insufficient funds. Available: R" + String.format("%.2f", getAvailableFunds())
+                            + ", requested: R" + String.format("%.2f", amount));
+
         }
         balance -= amount;
         history.add(new Transaction(java.time.LocalDate.now().toString(), description, -amount, category));
@@ -86,7 +92,7 @@ public class BankAccount {
 
     public String getStatement() {
         StringBuilder statement = new StringBuilder();
-        statement.append(String.format("Account %d (%s): Balance R%.2f%n", accountNumber, holderName, balance));
+        statement.append(String.format("===== %s Account %d: %s =====%n", getAccountType(), accountNumber, holderName));
         statement.append("Date       | Description | Amount | Category\n");
         statement.append("---------------------------------------------\n");
         for (Transaction transaction : history) {

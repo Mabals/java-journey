@@ -1,6 +1,6 @@
 package Lesson10;
 
-public class TransactionDemo {
+/*public class TransactionDemo {
     public static void main(String[] args) {
         Transaction t1 = new Transaction();
         t1.date = "2026-09-01";
@@ -21,4 +21,4 @@ public class TransactionDemo {
 
         
     }
-}
+}*/
